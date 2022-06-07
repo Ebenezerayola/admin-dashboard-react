@@ -3,7 +3,7 @@ import { Avatar, Box, Card, CardContent, Divider, Grid, Typography } from '@mui/
 import { Clock as ClockIcon } from '../../icons/clock';
 import { Download as DownloadIcon } from '../../icons/download';
 
-export const ProductCard = ({ product, ...rest }) => (
+export const ProductCard = ({ pair, product, ...rest }) => (
   <Card
     sx={{
       display: 'flex',
@@ -22,7 +22,7 @@ export const ProductCard = ({ product, ...rest }) => (
       >
         <Avatar
           alt="Product"
-          src={product.media}
+          src={product && product.media}
           variant="square"
         />
       </Box>
@@ -32,14 +32,15 @@ export const ProductCard = ({ product, ...rest }) => (
         gutterBottom
         variant="h5"
       >
-        {product.title}
+        {product && product.title}
+        {pair && pair.pair}
       </Typography>
       <Typography
         align="center"
         color="textPrimary"
         variant="body1"
       >
-        {product.description}
+        {product && product.description}
       </Typography>
     </CardContent>
     <Box sx={{ flexGrow: 1 }} />
@@ -66,8 +67,8 @@ export const ProductCard = ({ product, ...rest }) => (
           >
             Created:
             {' '}
-            {product.createdAt }
-            
+            {product && product.createdAt }
+            {pair && pair.createdAt}
           </Typography>
         </Grid>
         <Grid

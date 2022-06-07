@@ -36,16 +36,16 @@ export const ProductListToolbar = (props) => {
           sx={{ m: 1 }}
           variant="h4"
         >
-          Currency
+          {props.title || 'Currency'}
         </Typography>
-        <Box sx={{ m: 1 }}> 
+        <Box sx={{ m: 1 }}>
           <Button
             color="primary"
             variant="contained"
             onClick={() => setActiveModal(true)}
           >
             Add currency
-            
+
           </Button >
         </Box>
       </Box>
@@ -74,7 +74,7 @@ export const ProductListToolbar = (props) => {
             padding: '20px'
           }}>
             <Button sx={{ position: 'absolute', float: 'right', right: '0px', top: '0px', fontSize: '14px', cursor: 'pointer'}} onClick={() => setActiveModal(false)}>Close</Button>
-           
+
             <Box sx={{ marginTop: '40px' }}>
               <TextField id="curr-name" fullWidth placeholder='Currency (e.g $)' />
               <TextField id="iso" sx={{ marginTop: '15px'}} fullWidth placeholder='ISO symbol (NGN)' />

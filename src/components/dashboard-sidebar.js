@@ -33,7 +33,11 @@ const items = [
     icon: (<MoneyIcon fontSize="small" />),
     title: 'Elink Currencies'
   },
-  
+  {
+    href: '/currencypair',
+    icon: (<MoneyIcon fontSize="small" />),
+    title: 'Elink Currency Pair'
+  },
   {
     href: '/404',
     icon: (<XCircleIcon fontSize="small" />),
@@ -98,9 +102,9 @@ export const DashboardSidebar = (props) => {
                 >
                   Elink Market
                 </Typography>
-               
+
               </div>
-              
+
             </Box>
           </Box>
         </div>
@@ -127,7 +131,7 @@ export const DashboardSidebar = (props) => {
             py: 3
           }}
         >
-          
+
           <Box
             sx={{
               display: 'flex',
@@ -139,7 +143,7 @@ export const DashboardSidebar = (props) => {
               }
             }}
           >
-            
+
           </Box>
           <NextLink
             href="/" //Logout

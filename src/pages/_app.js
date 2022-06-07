@@ -1,3 +1,4 @@
+import 'antd/dist/antd.css';
 import Head from 'next/head';
 import { CacheProvider } from '@emotion/react';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
